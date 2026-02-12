@@ -1,6 +1,4 @@
 import type { Locale } from "./locales"
-import path from "path"
-import { promises as fs } from "fs"
 
 type Dict = Record<string, any>
 
@@ -12,102 +10,73 @@ type Dict = Record<string, any>
  */
 export type ContentLocale = "en" | "fr" | "ar"
 
-function repoRootFromFrontend() {
-  return path.resolve(process.cwd(), "..")
-}
-
 function localeFolder(locale: Locale | ContentLocale): ContentLocale {
   if (locale === "lb") return "ar"
   if (locale === "en" || locale === "fr" || locale === "ar") return locale
   return "en"
 }
 
-async function readJson(absPath: string): Promise<Dict> {
-  try {
-    const raw = await fs.readFile(absPath, "utf8")
-    const trimmed = raw.trim()
-
-    if (!trimmed) {
-      console.warn(`[i18n] Empty JSON file at ${absPath}, using empty object`)
-      return {}
-    }
-
-    try {
-      return JSON.parse(trimmed) as Dict
-    } catch (err) {
-      console.warn(`[i18n] Failed to parse JSON at ${absPath}, using empty object`, err)
-      return {}
-    }
-  } catch (err: any) {
-    if (err && err.code === "ENOENT") {
-      console.warn(`[i18n] Missing JSON file at ${absPath}, using empty object`)
-      return {}
-    }
-
-    console.warn(`[i18n] Error reading JSON at ${absPath}, using empty object`, err)
-    return {}
-  }
-}
-
 function get(obj: any, keyPath: string) {
+  if (!obj || typeof keyPath !== "string" || !keyPath) return undefined
   return keyPath
     .split(".")
     .reduce((acc, k) => (acc && acc[k] !== undefined ? acc[k] : undefined), obj)
 }
 
 /* =========================
-   COMMON TEXT (UI)
+   IN-MEMORY CACHE (client-safe)
 ========================= */
-export async function loadCommon(locale: Locale | ContentLocale): Promise<Dict> {
-  const folder = localeFolder(locale)
-  const file = path.join(
-    repoRootFromFrontend(),
-    "packages",
-    "translations",
-    "locales",
-    folder,
-    "common.json"
-  )
-  return readJson(file)
+type Bundle = { common: Dict; seo: Dict; aria: Dict }
+const CACHE = new Map<ContentLocale, Bundle>()
+
+function ensureBundle(folder: ContentLocale): Bundle {
+  const existing = CACHE.get(folder)
+  if (existing) return existing
+  const fresh: Bundle = { common: {}, seo: {}, aria: {} }
+  CACHE.set(folder, fresh)
+  return fresh
 }
 
-/* =========================
-   SEO TEXT (meta, titles)
-========================= */
-export async function loadSeo(locale: Locale | ContentLocale): Promise<Dict> {
-  const folder = localeFolder(locale)
-  const file = path.join(
-    repoRootFromFrontend(),
-    "packages",
-    "translations",
-    "locales",
-    folder,
-    "seo.json"
-  )
-  return readJson(file)
+export function setCommon(locale: Locale | ContentLocale, dict: Dict) {
+  ensureBundle(localeFolder(locale)).common = dict || {}
 }
-
-/* =========================
-   ARIA / ACCESSIBILITY
-========================= */
-export async function loadAria(locale: Locale | ContentLocale): Promise<Dict> {
-  const folder = localeFolder(locale)
-  const file = path.join(
-    repoRootFromFrontend(),
-    "packages",
-    "translations",
-    "locales",
-    folder,
-    "aria.json"
-  )
-  return readJson(file)
+export function setSeo(locale: Locale | ContentLocale, dict: Dict) {
+  ensureBundle(localeFolder(locale)).seo = dict || {}
+}
+export function setAria(locale: Locale | ContentLocale, dict: Dict) {
+  ensureBundle(localeFolder(locale)).aria = dict || {}
 }
 
 /* =========================
    TRANSLATION HELPER
+   Supported calls:
+   1) t(locale, "common.hero.badge")      ✅ preferred (uses cache set by server props)
+   2) t(dict, "hero.badge")              ✅ dict mode (best for client components)
 ========================= */
-export function t(dict: Dict, key: string): string {
-  if (!key) return ""
-  const v = get(dict, key)
+export function t(localeOrDict: Locale | ContentLocale | Dict, keyPath: string): string {
+  if (!keyPath) return ""
+
+  // Dict mode: t(dict, "x.y.z")
+  if (typeof localeOrDict === "object" && localeOrDict !== null) {
+    const v = get(localeOrDict, keyPath)
+    return typeof v === "string" ? v : ""
+  }
+
+  // Locale mode: t(locale, "common.x.y") -> reads from cache (must be set via setCommon/setSeo/setAria)
+  const folder = localeFolder(localeOrDict)
+  const bundle = ensureBundle(folder)
+
+  const parts = keyPath.split(".")
+  const root = parts[0]
+  const rest = parts.slice(1).join(".")
+
+  let dict: Dict | undefined
+  if (root === "common") dict = bundle.common
+  else if (root === "seo") dict = bundle.seo
+  else if (root === "aria") dict = bundle.aria
+  else dict = bundle.common
+
+  const lookupPath = root === "common" || root === "seo" || root === "aria" ? rest : keyPath
+  const v = get(dict, lookupPath)
   return typeof v === "string" ? v : ""
 }

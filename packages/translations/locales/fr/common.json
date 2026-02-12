@@ -1,42 +1,333 @@
 {
-  "header": {
-    "brand": "ACHI Digital",
-    "nav": {
-      "home": "Accueil",
-      "about": "À propos",
-      "services": "Services",
-      "blog": "Blog",
-      "contact": "Contact"
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "blogs": "Blog",
+    "contact": "Contact",
+    "getStarted": "Commencer"
+  },
+  "brand": {
+    "namePrefix": "Achi",
+    "nameSuffix": "Digital"
+  },
+  "aria": {
+    "mainNav": "Navigation principale",
+    "brandHome": "AchiDigital - Accueil",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
+  
+  "footer": {
+    "aria": {
+      "brandHome": "AchiDigital - Accueil"
     },
-    "servicesDropdown": {
-      "viewAll": "Voir tous les services",
-      "items": {
-        "aiWebsiteDevelopment": "Développement de sites web IA",
-        "seoAiVisibility": "SEO & visibilité IA",
-        "uxuiDesign": "Design UX/UI",
-        "performanceOptimization": "Optimisation des performances"
+    "brandDescription": "Nous transformons les entreprises grâce à des solutions digitales innovantes. Votre partenaire de confiance pour le développement web, le design et la croissance digitale.",
+    "columns": {
+      "services": "Services",
+      "company": "Entreprise",
+      "resources": "Ressources",
+      "legal": "Légal"
+    },
+    "links": {
+      "services": {
+        "webDevelopment": "Développement Web",
+        "uiuxDesign": "Design UI/UX",
+        "digitalMarketing": "Marketing Digital",
+        "mobileApps": "Applications Mobiles",
+        "aiSolutions": "Solutions IA"
+      },
+      "company": {
+        "aboutUs": "À propos",
+        "ourTeam": "Notre équipe",
+        "careers": "Carrières",
+        "blog": "Blog",
+        "contact": "Contact"
+      },
+      "resources": {
+        "caseStudies": "Études de cas",
+        "documentation": "Documentation",
+        "helpCenter": "Centre d’aide",
+        "apiReference": "Référence API",
+        "partners": "Partenaires"
+      },
+      "legal": {
+        "privacyPolicy": "Politique de confidentialité",
+        "termsOfService": "Conditions d’utilisation",
+        "cookiePolicy": "Politique de cookies",
+        "gdpr": "RGPD"
       }
     },
-    "cta": "Obtenir un audit de site gratuit",
-    "lang": {
-      "en": "EN",
-      "fr": "FR",
-      "ar": "AR"
+    "social": {
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "instagram": "Instagram"
+    },
+    "newsletter": {
+      "title": "Restez informé",
+      "subtitle": "Abonnez-vous à notre newsletter pour recevoir les dernières actualités et analyses.",
+      "emailPlaceholder": "Entrez votre email",
+      "emailAria": "Email pour la newsletter",
+      "subscribe": "S’abonner"
+    },
+    "bottom": {
+      "copyrightBrand": "AchiDigital",
+      "rights": "Tous droits réservés.",
+      "crafted": "Conçu avec passion à San Francisco 🌉"
     }
   },
-  "home": {
-    "hero": {
-      "h1": "Création de sites web qui transforment votre entreprise en moteur de croissance.",
-      "subtitle": "Nous sommes une agence digitale full service spécialisée dans la création et le développement de sites web professionnels, sur mesure et orientés conversion, pour les entreprises qui veulent générer plus de leads, plus de ventes et un retour sur investissement durable.",
-      "ctaPrimary": "Faire créer un site web professionnel",
-      "ctaSecondary": "Découvrir nos solutions web"
+  "hero": {
+    "badge": "Agence digitale premium • Pensée pour la performance",
+    "headline": {
+      "words": ["Nous", "créons", "des", "expériences", "numériques", "qui", "convertissent"],
+      "highlight": ["expériences", "numériques"]
+    },
+    "subheadline": "Transformez votre vision en réalité grâce à des solutions web modernes, une innovation alimentée par l’IA et un marketing digital stratégique.",
+    "ctaPrimary": "Lancer votre projet",
+    "ctaSecondary": "Découvrir notre histoire",
+    "trustTitle": "Ils nous font confiance",
+    "trustCompanies": ["TechCorp", "InnovateLab", "FutureScale", "DataFlow", "CloudNex"],
+    "scrollHint": "Défiler"
+  },
+  "about": {
+    "kicker": "À propos",
+    "heading": {
+      "prefix": "Créer",
+      "highlight": "l’excellence digitale"
+    },
+    "intro": "Nous sommes une équipe d’innovateurs passionnés, dédiée à transformer les entreprises grâce à des solutions digitales stratégiques et des technologies de pointe.",
+    "story": {
+      "title": "Notre histoire",
+      "p1": "Fondée avec la volonté de relier innovation technologique et croissance business, AchiDigital est devenue une agence digitale full-service, reconnue par les startups comme par les entreprises.",
+      "p2": "Notre équipe pluridisciplinaire combine design, développement et stratégie digitale pour créer des solutions qui sont à la fois magnifiques et orientées résultats."
+    },
+    "signature": {
+      "badge": "AD",
+      "name": "Équipe AchiDigital",
+      "role": "Leaders de l’innovation digitale"
+    },
+    "values": [
+      {
+        "title": "Orientés mission",
+        "description": "Nous livrons des résultats mesurables alignés sur vos objectifs business."
+      },
+      {
+        "title": "Innovation d’abord",
+        "description": "Nous utilisons des technologies de pointe pour vous garder en avance sur la concurrence."
+      },
+      {
+        "title": "Centrés client",
+        "description": "Votre réussite est la nôtre. Nous construisons des partenariats durables, pas seulement des projets."
+      },
+      {
+        "title": "Axés croissance",
+        "description": "Chaque solution est pensée pour évoluer et grandir avec votre activité."
+      }
+    ],
+    "stats": [
+      { "value": "150+", "label": "Projets livrés" },
+      { "value": "50+", "label": "Clients satisfaits" },
+      { "value": "8+", "label": "Années d’expérience" },
+      { "value": "99%", "label": "Satisfaction client" }
+    ]
+  },
+  "services": {
+    "kicker": "Nos services",
+    "heading": { "prefix": "Des solutions qui", "highlight": "évoluent" },
+    "intro": "De l’idée au lancement et au-delà, nous proposons des services digitaux complets, adaptés à vos besoins.",
+    "learnMore": "En savoir plus",
+    "learnMoreAria": "En savoir plus sur {service}",
+    "badges": { "popular": "Populaire", "new": "Nouveau", "beta": "Bêta" },
+    "items": [
+      {
+        "title": "Développement Web",
+        "description": "Sites web et applications sur mesure, conçus avec des technologies modernes pour des performances et une scalabilité optimales.",
+        "badge": "Populaire"
+      },
+      {
+        "title": "Design UI/UX",
+        "description": "Un design centré utilisateur qui améliore l’expérience et favorise la conversion."
+      },
+      {
+        "title": "Optimisation SEO",
+        "description": "Des stratégies data-driven pour renforcer votre visibilité et vos positions sur les moteurs de recherche."
+      },
+      {
+        "title": "Marketing digital",
+        "description": "Des campagnes complètes multi-canaux pour maximiser la portée et le ROI."
+      },
+      {
+        "title": "Applications mobiles",
+        "description": "Applications natives et cross-platform pour une expérience mobile fluide.",
+        "badge": "Nouveau"
+      },
+      {
+        "title": "Solutions IA",
+        "description": "Automatisation intelligente et outils basés sur l’IA pour améliorer la productivité.",
+        "badge": "Bêta"
+      },
+      {
+        "title": "Analytics & insights",
+        "description": "Analyses actionnables pour guider les décisions et mesurer la réussite."
+      },
+      {
+        "title": "Cybersécurité",
+        "description": "Solutions de sécurité robustes pour protéger vos actifs numériques et les données clients."
+      }
+    ],
+    "cta": {
+      "text": "Besoin de quelque chose de sur-mesure ? On adore les défis uniques.",
+      "link": "Discutons de votre projet"
     }
   },
-  "nav": {
-    "services": "Services",
-    "about": "À propos",
-    "blog": "Blog",
-    "careers": "Carrières",
-    "contact": "Contact"
+    "process": {
+    "kicker": "Notre méthode",
+    "heading": { "prefix": "Comment nous", "highlight": "travaillons" },
+    "intro": "Une méthode éprouvée qui génère des résultats, de l’idée au lancement.",
+    "stepLabel": "Étape",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Découverte",
+        "description": "Nous analysons votre activité, vos objectifs et votre audience pour définir une stratégie sur mesure."
+      },
+      {
+        "step": "02",
+        "title": "Stratégie & Design",
+        "description": "Nous élaborons une feuille de route claire et des designs alignés sur votre vision."
+      },
+      {
+        "step": "03",
+        "title": "Développement",
+        "description": "Nous construisons votre solution avec des technologies modernes pour garantir performance et évolutivité."
+      },
+      {
+        "step": "04",
+        "title": "Lancement & Croissance",
+        "description": "Nous lançons votre projet et vous accompagnons pour soutenir une croissance continue."
+      }
+    ]
+  },
+  "faq": {
+  "kicker": "FAQ",
+  "heading": {
+    "prefix": "Questions",
+    "highlight": "Fréquentes"
+  },
+  "intro": "Découvrez les réponses aux questions fréquemment posées concernant nos services, notre méthodologie et notre approche AI-first.",
+  "items": [
+    {
+      "question": "Quels services propose AchiDigital ?",
+      "answer": "Nous proposons le développement de sites web AI-first, des applications full-stack, du design UI/UX, du SEO et optimisation LLM, de la stratégie de contenu, de l’ingénierie de performance et des solutions d’automatisation IA."
+    },
+    {
+      "question": "Combien de temps dure un projet typique ?",
+      "answer": "La durée dépend de la complexité. Un site professionnel prend généralement 4 à 6 semaines, tandis qu’une application avancée ou une plateforme IA peut nécessiter 8 à 16 semaines."
+    },
+    {
+      "question": "Comment fonctionne votre tarification ?",
+      "answer": "Nos tarifs sont transparents et adaptés à votre projet. Nous proposons des forfaits fixes, des contrats par étapes ou des partenariats stratégiques à long terme."
+    },
+    {
+      "question": "Proposez-vous un support et une optimisation continue ?",
+      "answer": "Oui. Nous assurons maintenance technique, mises à jour de sécurité, suivi SEO, optimisation des performances et améliorations IA continues."
+    },
+    {
+      "question": "Pouvez-vous travailler avec des systèmes existants ?",
+      "answer": "Absolument. Nous intégrons des CMS, API, CRM, ERP, solutions e-commerce et outils tiers pour améliorer votre infrastructure actuelle."
+    },
+    {
+      "question": "Qu’est-ce qui différencie AchiDigital ?",
+      "answer": "Nous sommes une agence AI-first orientée croissance. Nous combinons expertise technique, performance, SEO multilingue et stratégie de conversion pour générer des résultats mesurables."
+    }
+  ],
+  "cta": {
+    "text": "Vous avez encore des questions ? Nous sommes là pour vous aider.",
+    "linkLabel": "Contactez notre équipe →"
+  }
+},
+"contact": {
+  "kicker": "Contactez-nous",
+  "heading": {
+    "prefix": "Construisons quelque chose",
+    "highlight": "d'exceptionnel"
+  },
+  "intro": "Prêt à transformer votre présence digitale ? Contactez notre équipe et discutons de la manière dont nous pouvons vous aider à atteindre vos objectifs.",
+
+  "info": {
+    "email": {
+      "label": "Email",
+      "value": "hello@achidigital.com",
+      "href": "mailto:hello@achidigital.com"
+    },
+    "phone": {
+      "label": "Téléphone",
+      "value": "+1 (555) 123-4567",
+      "href": "tel:+15551234567"
+    },
+    "location": {
+      "label": "Localisation",
+      "value": "San Francisco, CA",
+      "href": "#"
+    }
+  },
+
+  "toast": {
+    "title": "Message envoyé !",
+    "description": "Nous vous répondrons sous 24 heures."
+  },
+
+  "form": {
+    "name": {
+      "label": "Votre nom *",
+      "placeholder": "Jean Dupont"
+    },
+    "email": {
+      "label": "Adresse email *",
+      "placeholder": "jean@example.com"
+    },
+    "company": {
+      "label": "Entreprise (optionnel)",
+      "placeholder": "Votre entreprise"
+    },
+    "message": {
+      "label": "Votre message *",
+      "placeholder": "Parlez-nous de votre projet..."
+    },
+    "submit": {
+      "label": "Envoyer le message",
+      "loading": "Envoi en cours..."
+    }
+  },
+
+  "privacyNote": "Vos informations sont sécurisées et ne seront jamais partagées avec des tiers.",
+
+  "hours": {
+    "title": "Heures d'ouverture",
+    "items": [
+      {
+        "day": "Lundi - Vendredi",
+        "time": "9h00 - 18h00"
+      },
+      {
+        "day": "Samedi",
+        "time": "10h00 - 16h00"
+      },
+      {
+        "day": "Dimanche",
+        "time": "Fermé"
+      }
+    ]
+  },
+
+  "responseTime": {
+    "value": "24h",
+    "label": "Temps de réponse moyen"
   }
 }
+
+
+}
+
+

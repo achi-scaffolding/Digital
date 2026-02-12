@@ -1,21 +1,23 @@
-import "../globals.css"
-
 import type { Metadata } from "next"
 import type { ReactNode } from "react"
 
 import SiteHeader from "../../src/components/header/SiteHeader"
-import { loadAria, loadCommon, loadSeo, t as tt } from "../../src/i18n/loadTranslations"
+import { loadAria, loadCommon, loadSeo } from "../../src/i18n/loadTranslations.server"
+import { t as tt } from "../../src/i18n/loadTranslations"
 import { dirForLocale, isLocale, type Locale } from "../../src/i18n/locales"
 
-function contentLocaleFor(locale: Locale): "en" | "fr" | "ar" {
+type ContentLocale = "en" | "fr" | "ar"
+
+function contentLocaleFor(locale: Locale): ContentLocale {
   if (locale === "lb") return "ar"
-  return locale
+  if (locale === "fr") return "fr"
+  return "en"
 }
 
 function canonicalFor(locale: Locale): string {
-  if (locale === "en") return "/"
   if (locale === "fr") return "/fr/"
-  return "/lb/"
+  if (locale === "lb") return "/lb/"
+  return "/en/"
 }
 
 export async function generateMetadata({
@@ -25,8 +27,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale: raw } = await params
   const locale = (isLocale(raw) ? raw : "en") as Locale
-
   const contentLocale = contentLocaleFor(locale)
+
   const seo = await loadSeo(contentLocale)
 
   const title = tt(seo, "home.title")
@@ -38,7 +40,7 @@ export async function generateMetadata({
     alternates: {
       canonical: canonicalFor(locale),
       languages: {
-        en: "/",
+        en: "/en/",
         fr: "/fr/",
         "ar-LB": "/lb/",
       },
@@ -101,8 +103,17 @@ export default async function LocaleLayout({
     brandHome: tt(aria, "header.brandHome"),
   }
 
+  const lang = contentLocale === "ar" ? "ar-LB" : contentLocale
+
   return (
-    <div dir={dir} data-locale={locale} className="min-h-screen bg-white">
+    <div lang={lang} dir={dir} data-locale={locale} className="min-h-screen">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-3 focus:py-2 focus:text-slate-900 focus:shadow"
+      >
+        Skip to content
+      </a>
+
       <SiteHeader locale={locale} text={headerText} aria={headerAria} />
 
       <main id="main" className="min-h-[calc(100vh-4rem)]">

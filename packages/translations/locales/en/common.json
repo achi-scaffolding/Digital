@@ -1,152 +1,333 @@
 {
-  "header": {
-    "brand": "ACHI Digital",
-    "nav": {
-      "home": "Home",
-      "about": "About",
-      "services": "Services",
-      "blog": "Blog",
-      "contact": "Contact"
-    },
-    "servicesDropdown": {
-      "viewAll": "View all services",
-      "items": {
-        "aiWebsiteDevelopment": "AI Website Development",
-        "seoAiVisibility": "SEO & AI Visibility",
-        "uxuiDesign": "UX/UI Design",
-        "performanceOptimization": "Performance Optimization"
-      }
-    },
-    "cta": "Get a Free Website Audit",
-    "lang": {
-      "en": "EN",
-      "fr": "FR",
-      "ar": "AR"
-    }
-  },
   "nav": {
-    "services": "Services",
+    "home": "Home",
     "about": "About",
-    "blog": "Blog",
-    "careers": "Careers",
-    "contact": "Contact"
+    "services": "Services",
+    "blogs": "Blogs",
+    "contact": "Contact",
+    "getStarted": "Get Started"
   },
-  "home": {
-    "hero": {
-      "h1": "Professional Website Development & Digital Growth Agency",
-      "subtitle": "We design and build high-performance business websites that help companies grow, convert visitors, and generate measurable results. As a full-service web development agency, we deliver website design and development, SEO-ready structure, and conversion-focused user experience—so your website becomes a real business asset, not just an online presence.",
-      "ctaPrimary": "Get a Free Website Audit",
-      "ctaSecondary": "View Services"
+  "brand": {
+    "namePrefix": "Achi",
+    "nameSuffix": "Digital"
+  },
+  "aria": {
+    "mainNav": "Main navigation",
+    "brandHome": "AchiDigital - Home",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "footer": {
+    "aria": {
+      "brandHome": "AchiDigital - Home"
+    },
+    "brandDescription": "Transforming businesses through innovative digital solutions. Your trusted partner for web development, design, and digital growth.",
+    "columns": {
+      "services": "Services",
+      "company": "Company",
+      "resources": "Resources",
+      "legal": "Legal"
+    },
+    "links": {
+      "services": {
+        "webDevelopment": "Web Development",
+        "uiuxDesign": "UI/UX Design",
+        "digitalMarketing": "Digital Marketing",
+        "mobileApps": "Mobile Apps",
+        "aiSolutions": "AI Solutions"
+      },
+      "company": {
+        "aboutUs": "About Us",
+        "ourTeam": "Our Team",
+        "careers": "Careers",
+        "blog": "Blog",
+        "contact": "Contact"
+      },
+      "resources": {
+        "caseStudies": "Case Studies",
+        "documentation": "Documentation",
+        "helpCenter": "Help Center",
+        "apiReference": "API Reference",
+        "partners": "Partners"
+      },
+      "legal": {
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service",
+        "cookiePolicy": "Cookie Policy",
+        "gdpr": "GDPR"
+      }
+    },
+    "social": {
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "instagram": "Instagram"
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "subtitle": "Subscribe to our newsletter for the latest insights and updates.",
+      "emailPlaceholder": "Enter your email",
+      "emailAria": "Email for newsletter",
+      "subscribe": "Subscribe"
+    },
+    "bottom": {
+      "copyrightBrand": "AchiDigital",
+      "rights": "All rights reserved.",
+      "crafted": "Crafted with passion in San Francisco 🌉"
     }
-  }
+  },
+  
+  "hero": {
+    "badge": "Premium digital agency • Built for performance",
+    "headline": {
+      "words": ["We", "Build", "Digital", "Experiences", "That", "Drive", "Growth"],
+      "highlight": ["Digital", "Experiences"]
+    },
+    "subheadline": "Transform your vision into reality with cutting-edge web solutions, AI-powered innovation, and strategic digital marketing.",
+    "ctaPrimary": "Start Your Project",
+    "ctaSecondary": "Watch Our Story",
+    "trustTitle": "Trusted by teams building the future",
+    "trustCompanies": ["TechCorp", "InnovateLab", "FutureScale", "DataFlow", "CloudNex"],
+    "scrollHint": "Scroll"
+  },
+    "about": {
+    "kicker": "About Us",
+    "heading": {
+      "prefix": "Crafting",
+      "highlight": "Digital Excellence"
+    },
+    "intro": "We're a team of passionate innovators dedicated to transforming businesses through strategic digital solutions and cutting-edge technology.",
+    "story": {
+      "title": "Our Story",
+      "p1": "Founded with a vision to bridge the gap between innovative technology and business growth, AchiDigital has evolved into a full-service digital agency trusted by startups and enterprises alike.",
+      "p2": "Our multidisciplinary team combines expertise in design, development, and digital strategy to deliver solutions that not only look stunning but drive real business results."
+    },
+    "signature": {
+      "badge": "AD",
+      "name": "AchiDigital Team",
+      "role": "Digital Innovation Leaders"
+    },
+    "values": [
+      {
+        "title": "Mission-Driven",
+        "description": "We focus on delivering measurable results that align with your business goals."
+      },
+      {
+        "title": "Innovation First",
+        "description": "Leveraging cutting-edge technologies to keep you ahead of the competition."
+      },
+      {
+        "title": "Client-Centric",
+        "description": "Your success is our success. We build lasting partnerships, not just projects."
+      },
+      {
+        "title": "Growth Focused",
+        "description": "Every solution is designed to scale and grow with your business."
+      }
+    ],
+    "stats": [
+      { "value": "150+", "label": "Projects Delivered" },
+      { "value": "50+", "label": "Happy Clients" },
+      { "value": "8+", "label": "Years Experience" },
+      { "value": "99%", "label": "Client Satisfaction" }
+    ]
+  },
   "services": {
-    "page": {
-      "h1": "AI-Powered Digital Services for Business Growth",
-      "heroP": "Professional digital services built for growth, performance, and visibility — modular, scalable, and AI-ready.",
-      "entitySentence": "ACHIDigital provides AI-first website development, optimization, visibility, and advanced digital services designed to help businesses grow through high-performance, conversion-focused online platforms.",
-      "h2Services": "Our Services",
-      "h2WorkTogether": "How Our Services Work Together",
-      "workTogetherP": "Our services are modular and can be combined based on your goals and growth stage. Each service has a dedicated deep-dive page to keep the structure clean, scalable, and SEO-friendly.",
-      "h2ForWho": "Who These Services Are For",
-      "audience": {
-        "smb": "Small & mid-size businesses",
-        "startups": "Startups & founders",
-        "saas": "SaaS companies",
-        "ecommerce": "E-commerce brands",
-        "agencies": "Agencies",
-        "local": "Local businesses"
+    "kicker": "Our Services",
+    "heading": { "prefix": "Solutions That", "highlight": "Scale" },
+    "intro": "From concept to launch and beyond, we offer comprehensive digital services tailored to your unique business needs.",
+    "learnMore": "Learn More",
+    "learnMoreAria": "Learn more about {service}",
+    "badges": { "popular": "Popular", "new": "New", "beta": "Beta" },
+    "items": [
+      {
+        "title": "Web Development",
+        "description": "Custom websites and web applications built with modern technologies for optimal performance and scalability.",
+        "badge": "Popular"
       },
-      "h2Philosophy": "Our Service Philosophy",
-      "philosophy": {
-        "businessFirst": "Business-first",
-        "seoFirst": "SEO-first",
-        "performanceFirst": "Performance-first",
-        "aiSafe": "AI-safe",
-        "longTerm": "Long-term growth mindset"
+      {
+        "title": "UI/UX Design",
+        "description": "Human-centered design that delights users and drives conversions through intuitive experiences."
       },
-      "h2Outcomes": "Outcomes You Can Expect",
-      "outcomes": {
-        "conversion": "Higher conversion rates",
-        "visibility": "Better visibility across search and AI systems",
-        "performance": "Faster loading and stronger performance",
-        "scalability": "Scalable systems that grow with your business",
-        "roi": "Measurable ROI"
+      {
+        "title": "SEO Optimization",
+        "description": "Data-driven strategies to boost your visibility and dominate search engine rankings."
       },
-      "h2NotSure": "Not Sure Which Service You Need?",
-      "notSureP": "If you’re unsure where to start, we can guide you toward the right service mix based on your goals.",
-      "cta": {
-        "audit": "Request a Free Audit",
-        "guidance": "Get Expert Guidance",
-        "talk": "Talk to Our Team"
+      {
+        "title": "Digital Marketing",
+        "description": "Comprehensive campaigns across channels to maximize reach and ROI."
       },
-      "h2Faq": "Services FAQs",
-      "faq": {
-        "q1": "Do I need all services together?",
-        "a1": "No. Services are modular — you can start with one service and expand as you grow.",
-        "q2": "Can you work with my existing website?",
-        "a2": "Yes. We can improve performance, UX, SEO, and AI visibility without rebuilding everything.",
-        "q3": "Do you provide ongoing support?",
-        "a3": "Yes. We offer ongoing optimization and support depending on your needs."
+      {
+        "title": "Mobile Apps",
+        "description": "Native and cross-platform applications that deliver seamless mobile experiences.",
+        "badge": "New"
+      },
+      {
+        "title": "AI Solutions",
+        "description": "Intelligent automation and AI-powered tools to streamline operations and enhance productivity.",
+        "badge": "Beta"
+      },
+      {
+        "title": "Analytics & Insights",
+        "description": "Actionable data analytics to inform decisions and measure success."
+      },
+      {
+        "title": "Cybersecurity",
+        "description": "Robust security solutions to protect your digital assets and customer data."
       }
-    },
-    "list": {
-      "aiWebsiteDev": "AI Website Development",
-      "fullStack": "Full-Stack Web & App Development",
-      "performance": "Website Optimization & Performance Engineering",
-      "uxui": "UX/UI Design & User Experience",
-      "seo": "Search Engine Optimization (SEO)",
-      "geo": "GEO & LLM Search Optimization (AI Visibility)",
-      "aeo": "Answer Engine Optimization (AEO)",
-      "ppc": "Paid Advertising (PPC)",
-      "content": "Content & Professional Writing",
-      "ecommerce": "E-commerce Solutions",
-      "aiAutomation": "Advanced AI Integrations & Automation"
-    },
-      "cards": {
-      "aiWebsiteDev": {
-        "subtitle": "Adaptive • Fast • Conversion-first",
-        "alt": "AI Website Development"
+    ],
+    "cta": {
+      "text": "Need something custom? We love unique challenges.",
+      "link": "Let's discuss your project"
+    }
+  },
+   "process": {
+    "kicker": "Our Process",
+    "heading": { "prefix": "How We", "highlight": "Work" },
+    "intro": "A proven methodology that delivers results, from initial concept to successful launch.",
+    "stepLabel": "Step",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Discovery",
+        "description": "We dive deep into understanding your business, goals, and target audience to create a tailored strategy."
       },
-      "fullStack": {
-        "subtitle": "Product-grade web apps & platforms",
-        "alt": "Full-Stack Web & App Development"
+      {
+        "step": "02",
+        "title": "Strategy & Design",
+        "description": "Our team crafts a comprehensive blueprint and stunning designs that align with your vision."
       },
-      "geo": {
-        "subtitle": "AI search visibility & LLM discovery",
-        "alt": "GEO & LLM Search Optimization"
+      {
+        "step": "03",
+        "title": "Development",
+        "description": "We build your solution using cutting-edge technologies, ensuring scalability and performance."
       },
-      "uxui": {
-        "subtitle": "Premium UX that builds trust",
-        "alt": "UX/UI Design & User Experience"
-      },
-      "seo": {
-        "subtitle": "Technical SEO for ranking & growth",
-        "alt": "Search Engine Optimization"
-      },
-      "content": {
-        "subtitle": "Human + AI • E-E-A-T content systems",
-        "alt": "Content & Professional Writing"
-      },
-      "aiAutomation": {
-        "subtitle": "Automation, agents, and integrations",
-        "alt": "Advanced AI Integrations & Automation"
+      {
+        "step": "04",
+        "title": "Launch & Grow",
+        "description": "We launch your project and provide ongoing support to help you achieve continuous growth."
       }
+    ]
+  },
+  "faq": {
+  "kicker": "FAQ",
+  "heading": {
+    "prefix": "Common",
+    "highlight": "Questions"
+  },
+  "intro": "Find answers to frequently asked questions about our services, process, and how we build AI-first high-performance websites.",
+  "items": [
+    {
+      "question": "What services does AchiDigital offer?",
+      "answer": "We offer AI-first website development, full-stack web applications, UI/UX design, SEO and LLM search optimization, content strategy, performance engineering, and AI automation solutions tailored to your business goals."
+    },
+    {
+      "question": "How long does a typical project take?",
+      "answer": "Project timelines depend on scope and complexity. A professional business website typically takes 4–6 weeks, while advanced web applications or AI-powered platforms may take 8–16 weeks."
+    },
+    {
+      "question": "What is your pricing structure?",
+      "answer": "We provide transparent pricing tailored to your project requirements. Depending on the engagement, we offer fixed-scope pricing, milestone-based contracts, or long-term strategic partnerships."
+    },
+    {
+      "question": "Do you provide ongoing support and optimization?",
+      "answer": "Yes. We offer ongoing support, technical maintenance, security updates, SEO monitoring, performance optimization, and continuous AI improvements to ensure long-term growth."
+    },
+    {
+      "question": "Can you work with existing platforms or systems?",
+      "answer": "Absolutely. We integrate with existing CMS platforms, APIs, CRMs, ERPs, e-commerce systems, and third-party tools to enhance your current infrastructure without disruption."
+    },
+    {
+      "question": "What makes AchiDigital different?",
+      "answer": "We are an AI-first growth-focused agency. We combine engineering precision, performance optimization, multilingual SEO, and conversion strategy to build websites that generate measurable business results."
+    }
+  ],
+  "cta": {
+    "text": "Still have questions? We're here to help.",
+    "linkLabel": "Contact our team →"
+  }
+},
+"contact": {
+  "kicker": "Get In Touch",
+  "heading": {
+    "prefix": "Let's Build Something",
+    "highlight": "Amazing"
+  },
+  "intro": "Ready to transform your digital presence? Get in touch with our team and let's discuss how we can help you achieve your goals.",
+
+  "info": {
+    "email": {
+      "label": "Email",
+      "value": "hello@achidigital.com",
+      "href": "mailto:hello@achidigital.com"
+    },
+    "phone": {
+      "label": "Phone",
+      "value": "+1 (555) 123-4567",
+      "href": "tel:+15551234567"
+    },
+    "location": {
+      "label": "Location",
+      "value": "San Francisco, CA",
+      "href": "#"
     }
   },
 
+  "toast": {
+    "title": "Message sent!",
+    "description": "We will get back to you within 24 hours."
+  },
 
-  "cards": {
-  "aiWebsiteDev": { "subtitle": "Adaptive • Fast • Conversion-first", "alt": "AI Website Development" },
-  "fullStack": { "subtitle": "Product-grade platforms & web apps", "alt": "Full-Stack Web & App Development" },
-  "performance": { "subtitle": "Speed, stability, Core Web Vitals", "alt": "Website Optimization & Performance" },
-  "uxui": { "subtitle": "Premium UX that builds trust", "alt": "UX/UI Design & User Experience" },
-  "seo": { "subtitle": "Technical SEO for ranking & growth", "alt": "Search Engine Optimization" },
-  "geo": { "subtitle": "AI search visibility & LLM discovery", "alt": "GEO & LLM Search Optimization" },
-  "aeo": { "subtitle": "Answers, snippets, assistant-ready pages", "alt": "Answer Engine Optimization" },
-  "ppc": { "subtitle": "High-intent traffic with control", "alt": "Paid Advertising (PPC)" },
-  "content": { "subtitle": "Human + AI • E-E-A-T content systems", "alt": "Content & Professional Writing" },
-  "ecommerce": { "subtitle": "Conversion-first online stores", "alt": "E-commerce Solutions" },
-  "aiAutomation": { "subtitle": "Automations, agents, integrations", "alt": "Advanced AI Integrations & Automation" }
+  "form": {
+    "name": {
+      "label": "Your Name *",
+      "placeholder": "John Doe"
+    },
+    "email": {
+      "label": "Email Address *",
+      "placeholder": "john@example.com"
+    },
+    "company": {
+      "label": "Company (Optional)",
+      "placeholder": "Your Company"
+    },
+    "message": {
+      "label": "Your Message *",
+      "placeholder": "Tell us about your project..."
+    },
+    "submit": {
+      "label": "Send Message",
+      "loading": "Sending..."
+    }
+  },
+
+  "privacyNote": "Your information is secure and never shared with third parties.",
+
+  "hours": {
+    "title": "Working Hours",
+    "items": [
+      {
+        "day": "Monday - Friday",
+        "time": "9:00 AM - 6:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "time": "10:00 AM - 4:00 PM"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ]
+  },
+
+  "responseTime": {
+    "value": "24h",
+    "label": "Average Response Time"
+  }
 }
+
+
+
 
 }
